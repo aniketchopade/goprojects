@@ -15,9 +15,12 @@ func a() {
 		d := recover()
 		if d != nil {
 			fmt.Println("Recover inside a()!")
-			c()
+			//c()
 		}
 	}()
+
+	defer fmt.Println("i am here too")
+
 	b()
 	c()
 }
